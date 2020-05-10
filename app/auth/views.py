@@ -1,4 +1,4 @@
-from . import views
+from . import auth
 from flask import render_template, redirect, request,url_for
 from ..models import Users
 
