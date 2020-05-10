@@ -17,3 +17,10 @@ class Register(FlaskForm):
     def validate_username(self, data_field):
         if Users.query.filter_by(username=data_field.data).first():
             raise ValidationError("There is an account with that username")
+    
+class Login(FlaskForm):
+    email=StringField("Username", validators=[Required(), Email()])
+    password=PasswordField("Password", validators=[Required()])
+    remember=BooleanField("Remember me")
+    submit=SubmitField("Sign In")
+    
