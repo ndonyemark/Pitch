@@ -19,8 +19,8 @@ class Register(FlaskForm):
             raise ValidationError("There is an account with that username")
     
 class Login(FlaskForm):
-    email=StringField("Username", validators=[Required(), Email()])
+    email=StringField("Email", validators=[Required(), Email()])
     password=PasswordField("Password", validators=[Required()])
     remember=BooleanField("Remember me")
     submit=SubmitField("Sign In")
-    
+
