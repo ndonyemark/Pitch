@@ -16,4 +16,4 @@ def profile(uname):
     if user is None:
         abort(404)
     
-    return render_template("profile/profile.html")
+    return render_template("profile/profile.html", user=user)
