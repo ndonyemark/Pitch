@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center text-danger text-italic">{{user.username | capitalize}}</h3>
+
+            <!-- {% if pitch %}
+            <div class="card">
+                <div class="card-body">
+                    <h1>{{pitch.title}}</h1>
+                    <p>{{pitch.pitch}}</p>
+                    <p class="text-italic">{{pitch.date_posted}}</p>
+                    <a href="" class="btn btn-danger">delete</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="card">
+                <div class="card-body">
+                    <p>sorry {{user.username}} you have no pitches yet</p>
+                    <p>would you like to post one?<a href="#" class="btn btn-success">Pitch</a></p>
+                </div> -->
+              <!-- </div>
+            {% endif %} -->
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
