@@ -26,4 +26,4 @@ def login():
             return redirect(request.args.get("next") or url_for("main.index"))
             flash("invalid uersname or password")
     title="Login"
-    return render_template("auth/login.html", title=title)
+    return render_template("auth/login.html", title=title, login_form=login_form)
