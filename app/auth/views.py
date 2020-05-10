@@ -13,7 +13,7 @@ def register():
         db.session.commit()
         return redirect("auth.login")
     title="Register"
-    return render_template("auth/regiter.html", title=title)
+    return render_template("auth/regiter.html", title=title, registration=registration)
 
 @auth.route("/login")
 def login():
