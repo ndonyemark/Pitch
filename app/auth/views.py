@@ -9,7 +9,7 @@ from flask_login import login_user, logout_user,login_required
 def register():
     registration=Register()
     if registration.validate_on_submit():
-        users=Users(username=registration.username.data, email=registration.email.data, pass_secure=registration.password.data)
+        users=Users(username=registration.username.data, email=registration.email.data, password=registration.password.data)
         db.session.add(users)
         db.session.commit()
         return redirect(url_for("auth.login"))
